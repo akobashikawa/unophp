@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Unophp by akobashikawa</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Unophp</h1>
+        <p>Unobtrusive Simple Framework for PHP</p>
+
+        <p class="view"><a href="https://github.com/akobashikawa/unophp">View the Project on GitHub <small>akobashikawa/unophp</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/akobashikawa/unophp/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/akobashikawa/unophp/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/akobashikawa/unophp">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="unophp" class="anchor" href="#unophp"><span class="octicon octicon-link"></span></a>unophp</h1>
+
+<p>Unobtrusive Simple Framework for PHP</p>
+
+<h2>
+<a name="idea" class="anchor" href="#idea"><span class="octicon octicon-link"></span></a>Idea</h2>
+
+<p>Siguiendo la idea de <em>unobtrusive javascript</em>, que aplica javascript tratando de respetar el html original, <strong>unophp</strong> aplica contenido dinámico tratando de respetar el html original.</p>
+
+<h2>
+<a name="uso" class="anchor" href="#uso"><span class="octicon octicon-link"></span></a>Uso</h2>
+
+<p>El proyecto se viene probando con un web server <strong>Apache (2.4.3)</strong> con el módulo <strong>Rewrite</strong> y soporte para <strong>PHP</strong> (5.4.7). Se recomiendan configuraciones similares.</p>
+
+<p>Los archivos del <em>template</em> html se colocan en el directorio <code>html/</code>.</p>
+
+<p>Se puede usar la ruta normal para acceder a estos templates. Por ejemplo: <code>http://mysite.com/html/helloworld.html</code></p>
+
+<p>Para acceder al contenido dinámico, o <em>renderizado</em>, se usa una ruta similar, pero sin html/. Por ejemplo: <code>http://mysite.com/helloworld.html</code> conducirá a renderizar <code>html/helloworld.html</code></p>
+
+<p>Es posible pasar argumentos usando un esquema clean url. Por ejemplo: <code>http://mysite.com/helloworld.html/a/b/c</code> se interpreta como <code>http://mysite.com/index.php?p=helloworld.html&amp;q=a/b/c</code></p>
+
+<blockquote>
+<p>Se usa <strong>mod_rewrite</strong> para administrar las peticiones. Aquellas que contienen <code>.html</code> son pasadas a <code>index.php</code>. Las demás son usadas tal cual.</p>
+
+<p>Para asegurar la consistencia de los url relativos en los enlaces, imágenes y otros recursos, se inserta un <code>base</code> adecuado en el <code>head</code> del renderizado.</p>
+
+<p>Para ver con facilitar la visualización de los argumentos, se hace un volcado de $_GET al final de cada renderizado.</p>
+
+<p>En este momento, el proceso es practicamente un simple eco del template. El paso siguiente es disponer de un mecanismo de selección para poder aplicar el contenido dinámico. Manténgase en contacto para encontrar novedades.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/akobashikawa">akobashikawa</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
