@@ -54,11 +54,13 @@
 <blockquote>
 <p>Se usa <strong>mod_rewrite</strong> para administrar las peticiones. Aquellas que contienen <code>.html</code> son pasadas a <code>index.php</code>. Las demás son usadas tal cual.</p>
 
+<p>Se usa <strong>QueryPath</strong> (3.0) para seleccionar los elementos a la <em>jQuery</em>, usando selectores CSS, y aplicar los reemplazos dinámicos.</p>
+
 <p>Para asegurar la consistencia de los url relativos en los enlaces, imágenes y otros recursos, se inserta un <code>base</code> adecuado en el <code>head</code> del renderizado.</p>
 
 <p>Para ver con facilitar la visualización de los argumentos, se hace un volcado de $_GET al final de cada renderizado.</p>
 
-<p>En este momento, el proceso es practicamente un simple eco del template. El paso siguiente es disponer de un mecanismo de selección para poder aplicar el contenido dinámico. Manténgase en contacto para encontrar novedades.</p>
+<p>En este momento, el proceso es practicamente un simple eco del template. El paso siguiente es disponer de un mecanismo modular para la solución de casos. Manténgase en contacto para encontrar novedades.</p>
 </blockquote>
       </section>
       <footer>
