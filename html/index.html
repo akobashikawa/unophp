@@ -9,10 +9,10 @@
 		margin: 0 10%;
 	}
 	h1.title {
-		color: #f50;
+		color: #8af;
 	}
 	h1 small {
-		color: #aaa;
+		color: #f05;
 		font-weight: normal;
 		font-style: italic;
 		font-size: 60%;
@@ -27,49 +27,13 @@
 <body>
 	<h1 class="title">unophp - Unobtrusive PHP <small>alpha</small></h1>
 
-	<h2>Idea</h2>
-	<p>
-		Siguiendo la idea de <i>unobtrusive javascript</i>, que aplica javascript tratando de respetar el html original, <b>unophp</b> aplica contenido dinámico tratando de respetar el html original.
-	</p>
-
-	<h2>Uso</h2>
-	<p>
-		El proyecto se viene probando con un web server <b>Apache (2.4.3)</b> con el módulo <b>Rewrite</b> soporte para <b>PHP</b> (5.4.7). Se recomiendan configuraciones similares.
-	</p>
-	<p>
-		Los archivos del <em>template</em> html se colocan en el directorio <code>html/</code>.
-	</p>
-	<p>
-		Se puede usar la ruta normal para acceder a estos templates. Por ejemplo: <code>http://mysite.com/html/helloworld.html</code>
-	</p>
-	<p>
-		Para acceder al contenido dinámico, o <em>renderizado</em>, se usa una ruta similar, pero sin <code>html/</code>. Por ejemplo: <code>http://mysite.com/helloworld.html</code> conducirá a renderizar <code>html/helloworld.html</code>
-	</p>
-	<p>
-		Es posible pasar argumentos usando un esquema <i>clean url</i>. Por ejemplo: <code>http://mysite.com/helloworld.html/a/b/c</code> se interpreta como <code>http://mysite.com/index.php?p=helloworld.html&amp;q=a/b/c</code>
-	</p>
-
-	<blockquote>
-		<p>
-		Se usa <b>mod_rewrite</b> para administrar las peticiones. Aquellas que contienen .html son pasadas a index.php. Las demás son usadas tal cual.
-		</p>
-		<p>
-			Para asegurar la consistencia de los url relativos en los enlaces, imágenes y otros recursos, se inserta un <code>base</code> adecuado en el <code>head</code> del renderizado.
-		</p>
-		<p>
-			Para ver con facilitar la visualización de los argumentos, se hace un volcado de $_GET al final de cada renderizado.
-		</p>
-		<p>
-			En este momento, el proceso es practicamente un simple eco del template. El paso siguiente es disponer de un mecanismo de selección para poder aplicar el contenido dinámico. Manténgase en contacto para encontrar novedades.
-		</p>
-	</blockquote>
-
+	<a href="../README.md">README.md</a>
 
 	<h2>Ejemplos</h2>
 	<dl>
-		<dt><a href="html/helloworld.html">html/helloworld.html</a></dt>
+		<dt><a href="helloworld.html">html/helloworld.html</a></dt>
 		<dd>El template. Usa imágenes, links, css, javascript.</dd>
-		<dt><a href="helloworld.html">helloworld.html</a></dt>
+		<dt><a href="../helloworld.html">helloworld.html</a></dt>
 		<dd>El renderizado.</dd>
 	</dl>
 </body>

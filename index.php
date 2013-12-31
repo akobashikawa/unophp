@@ -5,7 +5,8 @@ if (file_exists($p)) {
 	require_once 'QueryPath/src/qp.php';
 
 	$basehref = dirname($_SERVER['PHP_SELF']) . '/' . dirname($p) . '/';
-	$qp = htmlqp($p)
+  // qp assume source is not utf8
+	$qp = qp(utf8_decode(file_get_contents($p)))
 		->find('head')
 		->prepend('<base href="' . $basehref . '"/>');
 

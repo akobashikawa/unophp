@@ -5,24 +5,26 @@ Unobtrusive Simple Framework for PHP
 
 ##Idea
 
-Siguiendo la idea de *unobtrusive javascript*, que aplica javascript tratando de respetar el html original, **unophp** aplica contenido dinÃ¡mico tratando de respetar el html original.
+Siguiendo la idea de *unobtrusive javascript*, que aplica javascript tratando de respetar el html original, **unophp** aplica contenido dinámico tratando de respetar el html original.
 
 ##Uso
 
-El proyecto se viene probando con un web server **Apache (2.4.3)** con el mÃ³dulo **Rewrite** y soporte para **PHP** (5.4.7). Se recomiendan configuraciones similares.
+El proyecto se viene probando con un web server **Apache (2.4.3)** con el módulo **Rewrite** y soporte para **PHP** (5.4.7). Se recomiendan configuraciones similares.
 
 Los archivos del *template* html se colocan en el directorio `html/`.
 
 Se puede usar la ruta normal para acceder a estos templates. Por ejemplo: `http://mysite.com/html/helloworld.html`
 
-Para acceder al contenido dinÃ¡mico, o *renderizado*, se usa una ruta similar, pero sin html/. Por ejemplo: `http://mysite.com/helloworld.html` conducirÃ¡ a renderizar `html/helloworld.html`
+Para acceder al contenido dinámico, o *renderizado*, se usa una ruta similar, pero sin html/. Por ejemplo: `http://mysite.com/helloworld.html` conducirá a renderizar `html/helloworld.html`
 
-Es posible pasar argumentos usando un esquema clean url. Por ejemplo: `http://mysite.com/helloworld.html/a/b/c` se interpreta como `http://mysite.com/index.php?p=helloworld.html&q=a/b/c`
+Es posible pasar argumentos usando un esquema *clean url*. Por ejemplo: `http://mysite.com/helloworld.html/a/b/c` se interpreta como `http://mysite.com/index.php?p=helloworld.html&q=a/b/c`
 
-> Se usa **mod_rewrite** para administrar las peticiones. Aquellas que contienen `.html` son pasadas a `index.php`. Las demÃ¡s son usadas tal cual.
+> Se usa **mod_rewrite** para administrar las peticiones. Aquellas que contienen `.html` son pasadas a `index.php`. Las demás son usadas tal cual.
 >
-> Para asegurar la consistencia de los url relativos en los enlaces, imÃ¡genes y otros recursos, se inserta un `base` adecuado en el `head` del renderizado.
+> Se usa **QueryPath** (3.0) para seleccionar los elementos a la *jQuery*, usando selectores CSS, y aplicar los reemplazos dinámicos.
 >
-> Para ver con facilitar la visualizaciÃ³n de los argumentos, se hace un volcado de $_GET al final de cada renderizado.
+> Para asegurar la consistencia de los url relativos en los enlaces, imágenes y otros recursos, se inserta un `base` adecuado en el `head` del renderizado.
 >
-> En este momento, el proceso es practicamente un simple eco del template. El paso siguiente es disponer de un mecanismo de selecciÃ³n para poder aplicar el contenido dinÃ¡mico. MantÃ©ngase en contacto para encontrar novedades.
+> Para ver con facilitar la visualización de los argumentos, se hace un volcado de $_GET al final de cada renderizado.
+>
+> En este momento, el proceso es practicamente un simple eco del template. El paso siguiente es disponer de un mecanismo modular para la solución de casos. Manténgase en contacto para encontrar novedades.
