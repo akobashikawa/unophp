@@ -15,11 +15,9 @@ Los archivos del *template* html se colocan en el directorio `html/`.
 
 Se puede usar la ruta normal para acceder a estos templates. Por ejemplo: `http://mysite.com/html/helloworld.html`
 
-Para acceder al contenido dinámico, o *renderizado*, se usa una ruta similar, pero sin html/. Por ejemplo: `http://mysite.com/helloworld.html` conducirá a renderizar `html/helloworld.html`
+Para acceder al contenido dinámico, o *renderizado*, se usa una ruta. Por ejemplo: `http://mysite.com/?q=helloworld` conducirá a procesar el url `helloworld` y eventualmente renderizar `html/helloworld.html`
 
-Es posible pasar argumentos usando un esquema *clean url*. Por ejemplo: `http://mysite.com/helloworld.html/a/b/c` se interpreta como `http://mysite.com/index.php?p=helloworld.html&q=a/b/c`
-
-> Se usa **mod_rewrite** para administrar las peticiones. Aquellas que contienen `.html` son pasadas a `index.php`. Las demás son usadas tal cual.
+> Ya no se usa **mod_rewrite**
 >
 > Se usa **QueryPath** (3.0) para seleccionar los elementos a la *jQuery*, usando selectores CSS, y aplicar los reemplazos dinámicos.
 >
